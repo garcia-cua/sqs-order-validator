@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sqs-order-validator
+  main:
+    allow-circular-references: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:orders
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+
+#Amazon Config
+amazon:
+  accessKey: your_access_key_here
+  secretKey: your_secret_key_here
